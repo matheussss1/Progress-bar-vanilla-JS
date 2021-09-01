@@ -48,16 +48,35 @@ body {
     height: 5px;
     width: 100px;
 }
+
+.progress-bar{
+    width: 0%;
+}
+
 .progress-bar__active{
     background-color: lime;
-    animation: move_progress_forward 2s forwards;
+    animation: move_progress_forward .5s forwards;
+}
+
+.progress-bar__inactive{
+    background-color: lime;
+    animation: move_progress_backward .5s forwards;
 }
 
 @keyframes move_progress_forward {
     from{
-        width: 0%;
+        width: 0px;
     }
     to{
+        width: 100%;
+    }
+}
+
+@keyframes move_progress_backward {
+    to{
+        width: 0px;
+    }
+    from{
         width: 100%;
     }
 }

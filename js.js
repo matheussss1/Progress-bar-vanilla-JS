@@ -24,11 +24,17 @@ const setEventListener = () => {
 }
 
 const moveStepFoward = () => {
+    progress_bar[stepState.active_progress_bar].classList.add('progress-bar__active')
+    progress_bar[stepState.active_progress_bar].classList.remove('progress-bar__inactive')
+    stepState.active_progress_bar++
     stepState.current_step++
     setEventListener()
 }
 
 const moveStepBackward = () => {
+    stepState.active_progress_bar--
+    progress_bar[stepState.active_progress_bar].classList.add('progress-bar__inactive')
+    progress_bar[stepState.active_progress_bar].classList.remove('progress-bar__active')
     stepState.current_step--
     setEventListener()
 }
@@ -58,5 +64,3 @@ const removeListeners = () => {
 }
 
 setEventListener()
-
-const t = progress_bar[stepState.active_progress_bar].classList.add('progress-bar__active')
