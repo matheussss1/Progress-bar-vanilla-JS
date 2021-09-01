@@ -15,7 +15,7 @@ body {
 }
 
 .container{
-    width: 700px;
+    width: 900px;
     height: 200px;
     background-color: lightgray;
     border-radius: 10px;
@@ -25,10 +25,10 @@ body {
 }
 
 .step{
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     border-radius: 100%;
-    background-color: red;
+    background-color: #aaa;
     text-align: center;
     font-size: 20px;
 }
@@ -39,27 +39,22 @@ body {
 }
 
 .progress{
-    height: 5px;
+    height: 10px;
     width: 100px;
     background-color: grey;
-
 }
 .progress-bar{
-    height: 5px;
+    height: 10px;
     width: 100px;
-}
-
-.progress-bar{
     width: 0%;
+    background-color: cornflowerblue;
 }
 
 .progress-bar__active{
-    background-color: lime;
     animation: move_progress_forward .5s forwards;
 }
 
 .progress-bar__inactive{
-    background-color: lime;
     animation: move_progress_backward .5s forwards;
 }
 
